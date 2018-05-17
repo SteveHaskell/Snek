@@ -1,16 +1,17 @@
-import java.awt.event.KeyEvent;
 
 
 public class Snek {
-	public static SnekBody snekBody;
+  public static SnekBody snekBody;
+
   public static void main(String[] args) {
     //Main class for running the basic Snake game
-	snekBody = SnekBody.getInstance();
-	 
-    SnekBoard.initThread();
+
+    snekBody = SnekBody.getInstance();
+
+    SnekBoard.initThread(); //constantly painting
     while(true) {
-        snekBody.updateBody();
-      }
+    snekBody.updateBody(); //main game loop
+    }
   }
 
   public static void wait(int waitTime) {
